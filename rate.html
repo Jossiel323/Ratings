@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <h1 class = Ty> Tyree Morris(Black Jersey)</h1>
+	<style type="text/css">
+		.Ty {
+			text-align: center;
+			color: white;
+			font-size: 30px;
+		}
+		img {
+           display: block;
+           margin: auto;
+        }
+        button {
+        	display: block;
+        	margin: auto;
+        }
+        body {
+        	background-color: red
+        }
+	</style>
+	<title> Ratingsonline.org</title>
+</head>
+<body>
+     
+	<img src="tyree.jpg" style="max-height:300px;">
+	<p id="rates"></p>
+	<button onclick="rate()">Rate Him Here</button>
+
+	<script type="text/javascript">
+		var ratings =[]
+
+		function getSum(total, num) {
+    		return total + num;
+		}
+		function rate(){
+			var rating = prompt();
+			ratings.push(rating);
+			var sum = 0;
+			for( var i = 0; i < ratings.length; i++ ){
+			    sum += parseInt( ratings[i], 10 ); //don't forget to add the base
+			    var avg = sum/ratings.length;
+			    document.getElementById("rates").innerHTML = avg
+
+			}
+		}
+    </script>
+
+       <!-- <h1 class =  ></h1> -->
+</body>
+</html>
